@@ -1,7 +1,14 @@
 """Book Play"""
+#mergeing three files into one file and compareing with 20k
+filenames = ['Book1.txt', 'Book2.txt', 'Book3.txt']
+with open('output_file', 'w') as outfile:
+    for fname in filenames:
+        with open(fname) as infile:
+            for line in infile:
+                outfile.write(line)
 
 # Open file for reading in text mode (default mode)
-f1 = open("Book1.txt","r")
+f1 = open("output_file.txt","r")
 f2 = open("20k.txt","r")
 
 # Print confirmation
